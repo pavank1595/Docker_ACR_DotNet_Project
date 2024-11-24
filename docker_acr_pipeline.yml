@@ -11,11 +11,7 @@ steps:
     SourceFolder: "/home/dockeruser/_work/1/s/"
     Contents: '**' 
     TargetFolder: "/home/dockeruser/dotnet_code"
-
-# - task: CmdLine@2
-#   inputs:
-#     script: "docker build -t myimage:v1.0 ."
-#     workingDirectory: "/home/dockeruser/dotnet_code/"
+    
 
 - task: DockerCompose@1
   inputs:
