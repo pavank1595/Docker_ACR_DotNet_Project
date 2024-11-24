@@ -12,11 +12,7 @@ steps:
     Contents: '**' 
     TargetFolder: "/home/dockeruser/dotnet_code"
 
-- task: Docker@2
-  displayName: 'Build Docker Image'
+- task: CmdLine@2
   inputs:
-    command: 'build'
-    Dockerfile: '/home/dockeruser/dotnet_code/Dockerfile'  # Path to your Dockerfile (adjust if needed)
-    buildContext: '/home/dockeruser/dotnet_code/'
-    tags: 'v1.0'
-
+    script: "docker build -t myimage:v1.0"
+    workingDirectory: "/home/dockeruser/dotnet_code/"
