@@ -28,8 +28,6 @@ steps:
     dockerComposeCommand: 'build'
 
 
-<<<<<<< HEAD
-=======
 - task: DockerCompose@1
   inputs:
     containerregistrytype: 'Azure Container Registry'
@@ -39,4 +37,3 @@ steps:
     projectName: 'prkapp'
     action: 'Run a Docker Compose command'
     dockerComposeCommand: 'push'
->>>>>>> fe94f1d1583d99dac9146a23825ba513806f0956
