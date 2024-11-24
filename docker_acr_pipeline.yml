@@ -14,5 +14,5 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: "docker build -t myimage:v1.0"
+    script: "docker build -t myimage:v1.0 ."
     workingDirectory: "/home/dockeruser/dotnet_code/"
