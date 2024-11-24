@@ -1,0 +1,6 @@
+services:
+  app:
+    build:
+      context: /home/dockeruser/dotnet_code/
+      dockerfile: Dockerfile
+    image: prkapp.azurecr.io/sampleapp:v1.0
