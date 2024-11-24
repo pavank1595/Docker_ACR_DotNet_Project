@@ -18,5 +18,5 @@ steps:
     command: 'build'
     Dockerfile: '/home/dockeruser/dotnet_code/Dockerfile'  # Path to your Dockerfile (adjust if needed)
     buildContext: '/home/dockeruser/dotnet_code/'
-    tags: 'sampleapp:v1.0'
+    tags: 'v1.0'
 
