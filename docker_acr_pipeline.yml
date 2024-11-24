@@ -1,0 +1,21 @@
+trigger: none
+
+pool:
+  name: "linuxpool"
+  demands:
+    - Agent.Name -equals linuxagent
+
+steps:
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: "/home/dockeruser/_work/1/s/"
+    Contents: '**' 
+    TargetFolder: "/home/dockeruser/dotnet_code"
+
+# - task: Docker@2
+#   displayName: 'Build Docker Image'
+#   inputs:
+#     command: 'build'
+#     Dockerfile: '**/Dockerfile'  # Path to your Dockerfile (adjust if needed)
+#     tags: 'sampleapp:v1.0'
+
