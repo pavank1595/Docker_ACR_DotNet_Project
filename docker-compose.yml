@@ -1,9 +1,9 @@
 services:
   web:
     build:
-      context: /home/dockeruser/dotnet_code/
+      context: /home/devopsdockeruser/dotnet_code/
       dockerfile: Dockerfile
-    image: prkapp.azurecr.io/sampleapp:v1.0
+    image: prkappreg.azurecr.io/sampleapp:v1.0
     container_name: sampleapp_container
     ports:
       - 8080:80
