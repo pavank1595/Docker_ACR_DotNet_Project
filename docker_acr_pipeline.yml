@@ -7,6 +7,7 @@ pool:
 
 steps:
 - task: CopyFiles@2
+  displayName: "Copy files from default location"
   inputs:
     SourceFolder: "/home/devopsdockeruser/_work/1/s/"
     Contents: '**' 
@@ -14,6 +15,7 @@ steps:
     
 
 - task: DockerCompose@1
+  displayName: "Run docker build command"
   inputs:
     containerregistrytype: 'Azure Container Registry'
     azureSubscription: 'devops-azure-connection'
@@ -25,6 +27,7 @@ steps:
 
 
 - task: DockerCompose@1
+  displayName: "Run docker push command"
   inputs:
     containerregistrytype: 'Azure Container Registry'
     azureSubscription: 'devops-azure-connection'
@@ -35,6 +38,7 @@ steps:
     dockerComposeCommand: 'push'
 
 - task: DockerCompose@1
+  displayName: "Run container"
   inputs:
     containerregistrytype: 'Azure Container Registry'
     azureSubscription: 'devops-azure-connection'
